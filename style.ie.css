@@ -1,0 +1,11 @@
+/* begin Page */
+
+/* Created by Wickwood Marketing */
+/* For Styling all versions of IE */
+.art-logo-name,
+.art-logo-name a, 
+.art-logo-name a:link, 
+.art-logo-name a:visited, 
+.art-logo-name a:hover {
+  font-size: 44px;
+}
