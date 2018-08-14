@@ -2848,8 +2848,8 @@ form#user-login
    border: 2px solid #4f899e;
    margin: 0.5em 0;
    padding: 1em;
-   background: rgba(188, 214, 227, 0.5);
-   box-shadow: 2px 2px 3px 0px #b7b7b7;
+   background: rgba(207, 242, 255, 0.85);
+   box-shadow: 1px 1px 3px 0px #5d5d5d;
 }
 
 
