@@ -2852,4 +2852,7 @@ form#user-login
    box-shadow: 1px 1px 3px 0px #5d5d5d;
 }
 
-
+.view-reviews .field.field-name-field-renter-name,
+.view-reviews .field.views-field-title {
+   text-align: center;
+}
