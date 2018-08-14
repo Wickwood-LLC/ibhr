@@ -2856,3 +2856,7 @@ form#user-login
 .view-reviews .views-field-title {
    text-align: center;
 }
+.view-reviews .views-field-field-date-of-stay .views-label-field-date-of-stay,
+.view-reviews .views-field-field-date-of-stay .field-content {
+   display: inline-block;
+}
