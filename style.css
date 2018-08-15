@@ -2846,7 +2846,7 @@ form#user-login
 .boxed {
    border-radius: 10px;
    border: 2px solid #4f899e;
-   margin: 0.5em 0;
+   margin: 10px;
    padding: 1em;
    background: rgba(207, 242, 255, 0.85);
    box-shadow: 1px 1px 3px 0px #5d5d5d;
@@ -2858,5 +2858,10 @@ form#user-login
 }
 .view-reviews .views-field-field-date-of-stay .views-label-field-date-of-stay,
 .view-reviews .views-field-field-date-of-stay .field-content {
+   display: inline-block;
+}
+
+.node-type-review .field-name-field-date-of-stay .field-label,
+.node-type-review .field-name-field-date-of-stay .field-items {
    display: inline-block;
 }
