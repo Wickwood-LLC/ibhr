@@ -149,30 +149,24 @@ echo art_get_sidebar($art_sidebar_left, $vnavigation_left, 'art-sidebar1'); ?>
                                 <?php endif; ?>
                                 <?php else: ?>
                                 <div class="">
-                                    <div class="">
-                                        <div class="">
-                                            <div class="">
-                                                <?php print render($title_prefix); ?>
-                                                <!-- <?php if ($title): ?>
+                                    <?php print render($title_prefix); ?>
+                                    <!-- <?php if ($title): ?>
                                                 <h1 class="title" id="page-title"><?php print bb2html($title); ?></h1>
                                                 <?php endif; ?> -->
-                                                <?php print render($title_suffix); ?>
-                                                <?php if (!empty($tabs)) { echo $tabs.'<div class="cleared"></div>'; }; ?>
-                                                <?php if (!empty($tabs2)) { echo $tabs2.'<div class="cleared"></div>'; } ?>
-                                                <?php if (isset($mission) && !empty($mission)) { echo '<div id="mission">'.$mission.'</div>'; }; ?>
-                                                <?php if (!empty($help)) { echo render($help); } ?>
-                                                <?php if (!empty($messages)) { echo $messages; } ?>
-                                                <?php if (isset($action_links) && !empty($action_links)): ?>
-                                                <ul class="action-links">
-                                                    <?php print render($action_links); ?>
-                                                </ul>
-                                                <?php endif; ?>
-                                                <?php echo art_content_replace(render($content)); ?>
-                                            </div>
-                                            <div class="cleared"></div>
-                                        </div>
-                                        <div class="cleared"></div>
-                                    </div>
+                                    <?php print render($title_suffix); ?>
+                                    <?php if (!empty($tabs)) { echo $tabs.'<div class="cleared"></div>'; }; ?>
+                                    <?php if (!empty($tabs2)) { echo $tabs2.'<div class="cleared"></div>'; } ?>
+                                    <?php if (isset($mission) && !empty($mission)) { echo '<div id="mission">'.$mission.'</div>'; }; ?>
+                                    <?php if (!empty($help)) { echo render($help); } ?>
+                                    <?php if (!empty($messages)) { echo $messages; } ?>
+                                    <?php if (isset($action_links) && !empty($action_links)): ?>
+                                    <ul class="action-links">
+                                        <?php print render($action_links); ?>
+                                    </ul>
+                                    <?php endif; ?>
+                                    <?php echo art_content_replace(render($content)); ?>
+                                    <div class="cleared"></div>
+                                    <div class="cleared"></div>
                                 </div>
                                 <?php endif; ?>
                                 <?php if (!empty($banner4)) { echo '<div id="banner4">'.render($banner4).'</div>'; } ?>
