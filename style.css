@@ -2865,3 +2865,7 @@ form#user-login
 .node-type-review .field-name-field-date-of-stay .field-items {
    display: inline-block;
 }
+
+.page-reviews3 .pane-views-header {
+   text-align: center;
+}
