@@ -148,10 +148,10 @@ echo art_get_sidebar($art_sidebar_left, $vnavigation_left, 'art-sidebar1'); ?>
                                 </div>
                                 <?php endif; ?>
                                 <?php else: ?>
-                                <div class="art-box art-post">
-                                    <div class="art-box-body art-post-body">
-                                        <div class="art-post-inner art-article">
-                                            <div class="art-postcontent">
+                                <div class="">
+                                    <div class="">
+                                        <div class="">
+                                            <div class="">
                                                 <?php print render($title_prefix); ?>
                                                 <?php if ($title): ?>
                                                 <h1 class="title" id="page-title">
