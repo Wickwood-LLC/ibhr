@@ -149,11 +149,6 @@ echo art_get_sidebar($art_sidebar_left, $vnavigation_left, 'art-sidebar1'); ?>
                                 <?php endif; ?>
                                 <?php else: ?>
                                 <div class="">
-                                    <?php print render($title_prefix); ?>
-                                    <!-- <?php if ($title): ?>
-                                                <h1 class="title" id="page-title"><?php print bb2html($title); ?></h1>
-                                                <?php endif; ?> -->
-                                    <?php print render($title_suffix); ?>
                                     <?php if (!empty($tabs)) { echo $tabs.'<div class="cleared"></div>'; }; ?>
                                     <?php if (!empty($tabs2)) { echo $tabs2.'<div class="cleared"></div>'; } ?>
                                     <?php if (isset($mission) && !empty($mission)) { echo '<div id="mission">'.$mission.'</div>'; }; ?>
