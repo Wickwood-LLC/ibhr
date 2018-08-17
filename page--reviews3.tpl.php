@@ -133,36 +133,36 @@ echo art_get_sidebar($art_sidebar_left, $vnavigation_left, 'art-sidebar1'); ?>
                                 <?php endif; ?>
                                 <?php $art_post_position = strpos(render($content), "art-post"); ?>
                                 <?php if ($art_post_position === FALSE): ?>
-                                <div class="">
-                                    <div class="">
-                                        <div class="">
-                                            <div class="">
+                                <div class="art-box art-post">
+                                    <?php endif; ?>
+                                    <?php echo art_content_replace(render($content)); ?>
+                                    <?php if ($art_post_position === FALSE): ?>
+                                    <div class="cleared"></div>
+                                    <div class="cleared"></div>
+                                </div>
+                                <?php endif; ?>
+                                <?php else: ?>
+                                <div class="art-box art-post">
+                                    <div class="art-box-body art-post-body">
+                                        <div class="art-post-inner art-article">
+                                            <div class="art-postcontent">
+                                                <?php if (!empty($tabs)) { echo $tabs.'<div class="cleared"></div>'; }; ?>
+                                                <?php if (!empty($tabs2)) { echo $tabs2.'<div class="cleared"></div>'; } ?>
+                                                <?php if (isset($mission) && !empty($mission)) { echo '<div id="mission">'.$mission.'</div>'; }; ?>
+                                                <?php if (!empty($help)) { echo render($help); } ?>
+                                                <?php if (!empty($messages)) { echo $messages; } ?>
+                                                <?php if (isset($action_links) && !empty($action_links)): ?>
+                                                <ul class="action-links">
+                                                    <?php print render($action_links); ?>
+                                                </ul>
                                                 <?php endif; ?>
-                                                <?php echo art_content_replace(render($content)); ?>
-                                                <?php if ($art_post_position === FALSE): ?>
                                             </div>
                                             <div class="cleared"></div>
                                         </div>
                                         <div class="cleared"></div>
                                     </div>
                                 </div>
-                                <?php endif; ?>
-                                <?php else: ?>
-                                <div class="">
-                                    <?php if (!empty($tabs)) { echo $tabs.'<div class="cleared"></div>'; }; ?>
-                                    <?php if (!empty($tabs2)) { echo $tabs2.'<div class="cleared"></div>'; } ?>
-                                    <?php if (isset($mission) && !empty($mission)) { echo '<div id="mission">'.$mission.'</div>'; }; ?>
-                                    <?php if (!empty($help)) { echo render($help); } ?>
-                                    <?php if (!empty($messages)) { echo $messages; } ?>
-                                    <?php if (isset($action_links) && !empty($action_links)): ?>
-                                    <ul class="action-links">
-                                        <?php print render($action_links); ?>
-                                    </ul>
-                                    <?php endif; ?>
-                                    <?php echo art_content_replace(render($content)); ?>
-                                    <div class="cleared"></div>
-                                    <div class="cleared"></div>
-                                </div>
+                                <?php echo art_content_replace(render($content)); ?>
                                 <?php endif; ?>
                                 <?php if (!empty($banner4)) { echo '<div id="banner4">'.render($banner4).'</div>'; } ?>
                                 <?php if (!empty($user3) && !empty($user4)) : ?>
