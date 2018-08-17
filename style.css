@@ -2852,12 +2852,12 @@ form#user-login
    box-shadow: 1px 1px 3px 0px #5d5d5d;
 }
 
-.view-reviews .field.field-name-field-renter-name,
-.view-reviews .views-field-title {
+.reviews-view-panel-page .field.field-name-field-renter-name,
+.reviews-view-panel-page .views-field-title {
    text-align: center;
 }
-.view-reviews .views-field-field-date-of-stay .views-label-field-date-of-stay,
-.view-reviews .views-field-field-date-of-stay .field-content {
+.reviews-view-panel-page .views-field-field-date-of-stay .views-label-field-date-of-stay,
+.reviews-view-panel-page .views-field-field-date-of-stay .field-content {
    display: inline-block;
 }
 
@@ -2866,6 +2866,6 @@ form#user-login
    display: inline-block;
 }
 
-.page-reviews3 .pane-views-header {
+.reviews-view-panel-page .pane-views-header {
    text-align: center;
 }
