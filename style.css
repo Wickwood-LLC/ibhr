@@ -30,6 +30,9 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li
 
 p {
    font-size: 16px;
+   font-size: 16px;
+   margin: 12px 0;
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
 }
 
 .art-postheadericons {
@@ -2863,11 +2866,13 @@ form#user-login
 .reviews-view-panel-page .views-field-field-date-of-stay .views-label-field-date-of-stay,
 .reviews-view-panel-page .views-field-field-date-of-stay .field-content {
    display: inline-block;
+   font-weight: bold;
 }
 
 .node-type-review .field-name-field-date-of-stay .field-label,
 .node-type-review .field-name-field-date-of-stay .field-items {
    display: inline-block;
+   font-weight: bold;
 }
 
 .reviews-view-panel-page .pane-views-header {
