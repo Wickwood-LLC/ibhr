@@ -2686,7 +2686,7 @@ div.node.node-webform  .field-name-field-teaser{
   float: left;
   width: 40%;
   height: 100%;
-  margin: 1em 1em 0 1.5em;
+  margin: 0 1em 0 1em;
   padding: .5em;
   border: 6px double #125564;
 }
