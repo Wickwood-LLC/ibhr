@@ -21,7 +21,7 @@ function ibhr_breadcrumb($variables) {
     $output .= '<div class="breadcrumb art-postcontent">' . implode(' » ', $breadcrumb) . '</div>';
   }
 
-  if (count($breadcrumb) > 2) { // Only show breadcrumbs if we have more than 2 links or if we are on the exempted pages
+  if (count($breadcrumb) > 1) { // Only show breadcrumbs if we have more than 2 links or if we are on the exempted pages
     return $output;
   }
 }
