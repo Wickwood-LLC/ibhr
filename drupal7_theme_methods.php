@@ -19,6 +19,9 @@ function ibhr_breadcrumb($variables) {
     $output = '<h2 class="element-invisible art-postheader">' . t('You are here') . '</h2>';
 
     $output .= '<div class="breadcrumb art-postcontent">' . implode(' » ', $breadcrumb) . '</div>';
+  }
+
+  if ($depth > 1) { // Only show breadcrumbs if we have more than 2 links or if we are on the exempted pages
     return $output;
   }
 }
