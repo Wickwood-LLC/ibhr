@@ -111,7 +111,7 @@ echo art_get_sidebar($art_sidebar_left, $vnavigation_left, 'art-sidebar1'); ?>
                                     </div>
                                 </div>
                                 <?php endif; ?>
-                                <?php if (!empty($mission) || !empty($help) || !empty($messages) || !empty($action_links)): ?>
+                                <?php if ($mission || $help || $messages || $action_links): ?>
                                 <div class="art-box art-post">
                                     <div class="art-box-body art-post-body">
                                         <div class="art-post-inner art-article">
