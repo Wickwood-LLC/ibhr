@@ -119,7 +119,7 @@ echo art_get_sidebar($art_sidebar_left, $vnavigation_left, 'art-sidebar1'); ?>
                                                         <?php if (isset($mission) && !empty($mission)) { echo '<div id="mission">'.$mission.'</div>'; }; ?>
                                                         <?php if (!empty($help)) { echo render($help); } ?>
                                                         <?php if (!empty($messages)) { echo $messages; } ?>
-                                                        <?php if (isset($action_links) && !empty($action_links)): ?>
+                                                        <?php if ($action_links): ?>
                                                         <ul class="action-links">
                                                             <?php print render($action_links); ?>
                                                         </ul>
@@ -163,10 +163,10 @@ echo art_get_sidebar($art_sidebar_left, $vnavigation_left, 'art-sidebar1'); ?>
                                                         <?php if (isset($mission) && !empty($mission)) { echo '<div id="mission">'.$mission.'</div>'; }; ?>
                                                         <?php if (!empty($help)) { echo render($help); } ?>
                                                         <?php if (!empty($messages)) { echo $messages; } ?>
-                                                        <?php if (isset($action_links) && !empty($action_links)): ?>
-                                                        <ul class="action-links">
-                                                            <?php print render($action_links); ?>
-                                                        </ul>
+                                                        <?php if ($action_links): ?>
+                                                            <ul class="action-links">
+                                                                <?php print render($action_links); ?>
+                                                            </ul>
                                                         <?php endif; ?>
                                                         <?php echo art_content_replace(render($content)); ?>
                                                     </div>
