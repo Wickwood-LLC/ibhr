@@ -68,134 +68,135 @@ echo art_get_sidebar($art_sidebar_left, $vnavigation_left, 'art-sidebar1'); ?>
                             <div class="<?php echo art_get_content_cell_style($art_sidebar_left, $vnavigation_left, $art_sidebar_right, $vnavigation_right, $content); ?>">
                                 <?php if (!empty($banner2)) { echo '<div id="banner2">'.render($banner2).'</div>'; } ?>
                                 <?php if ((!empty($user1)) && (!empty($user2))) : ?>
-                                    <table class="position" cellpadding="0" cellspacing="0" border="0">
-                                        <tr valign="top">
-                                            <td class="half-width">
-                                                <?php echo render($user1); ?>
-                                            </td>
-                                            <td>
-                                                <?php echo render($user2); ?>
-                                            </td>
-                                        </tr>
-                                    </table>
+                                <table class="position" cellpadding="0" cellspacing="0" border="0">
+                                    <tr valign="top">
+                                        <td class="half-width">
+                                            <?php echo render($user1); ?>
+                                        </td>
+                                        <td>
+                                            <?php echo render($user2); ?>
+                                        </td>
+                                    </tr>
+                                </table>
                                 <?php else: ?>
-                                    <?php if (!empty($user1)) { echo '<div id="user1">'.render($user1).'</div>'; }?>
-                                    <?php if (!empty($user2)) { echo '<div id="user2">'.render($user2).'</div>'; }?>
+                                <?php if (!empty($user1)) { echo '<div id="user1">'.render($user1).'</div>'; }?>
+                                <?php if (!empty($user2)) { echo '<div id="user2">'.render($user2).'</div>'; }?>
                                 <?php endif; ?>
                                 <?php if (!empty($banner3)) { echo '<div id="banner3">'.render($banner3).'</div>'; } ?>
                                 <?php if (!empty($breadcrumb)): ?>
-                                    <div class="art-box art-post">
-                                        <div class="art-box-body art-post-body">
-                                            <div class="art-post-inner art-article">
-                                                <div class="art-postcontent">
-                                                    <?php { echo $breadcrumb; } ?>
-                                                </div>
-                                                <div class="cleared"></div>
+                                <div class="art-box art-post">
+                                    <div class="art-box-body art-post-body">
+                                        <div class="art-post-inner art-article">
+                                            <div class="art-postcontent">
+                                                <?php { echo $breadcrumb; } ?>
                                             </div>
                                             <div class="cleared"></div>
                                         </div>
+                                        <div class="cleared"></div>
                                     </div>
+                                </div>
                                 <?php endif; ?>
                                 <?php if (($is_front) || (isset($node) && isset($node->nid))): ?>
-                                    <?php if (!empty($tabs) || !empty($tabs2)): ?>
-                                        <div class="art-box art-post">
-                                            <div class="art-box-body art-post-body">
-                                                <div class="art-post-inner art-article">
-                                                    <div class="art-postcontent">
-                                                        <?php if (!empty($tabs)) { echo $tabs.'<div class="cleared"></div>'; }; ?>
-                                                        <?php if (!empty($tabs2)) { echo $tabs2.'<div class="cleared"></div>'; } ?>
-                                                    </div>
-                                                    <div class="cleared"></div>
-                                                </div>
-                                                <div class="cleared"></div>
+                                <?php if (!empty($tabs) || !empty($tabs2)): ?>
+                                <div class="art-box art-post">
+                                    <div class="art-box-body art-post-body">
+                                        <div class="art-post-inner art-article">
+                                            <div class="art-postcontent">
+                                                <?php if (!empty($tabs)) { echo $tabs.'<div class="cleared"></div>'; }; ?>
+                                                <?php if (!empty($tabs2)) { echo $tabs2.'<div class="cleared"></div>'; } ?>
                                             </div>
+                                            <div class="cleared"></div>
                                         </div>
-                                    <?php endif; ?>
-                                    <?php if (!empty($mission) || !empty($help) || !empty($messages) || !empty($action_links)): ?>
-                                        <div class="art-box art-post">
-                                            <div class="art-box-body art-post-body">
-                                                <div class="art-post-inner art-article">
-                                                    <div class="art-postcontent">
-                                                        <?php if (isset($mission) && !empty($mission)) { echo '<div id="mission">'.$mission.'</div>'; }; ?>
-                                                        <?php if (!empty($help)) { echo render($help); } ?>
-                                                        <?php if (!empty($messages)) { echo $messages; } ?>
-                                                        <?php if (isset($action_links) && !empty($action_links)): ?>
-                                                        <ul class="action-links">
-                                                            <?php print render($action_links); ?>
-                                                        </ul>
-                                                        <?php endif; ?>
-                                                    </div>
-                                                    <div class="cleared"></div>
-                                                </div>
-                                                <div class="cleared"></div>
+                                        <div class="cleared"></div>
+                                    </div>
+                                </div>
+                                <?php endif; ?>
+                                <?php if (!empty($mission) || !empty($help) || !empty($messages) || !empty($action_links)): ?>
+                                <div class="art-box art-post">
+                                    <div class="art-box-body art-post-body">
+                                        <div class="art-post-inner art-article">
+                                            <div class="art-postcontent">
+                                                <?php if (isset($mission) && !empty($mission)) { echo '<div id="mission">'.$mission.'</div>'; }; ?>
+                                                <?php if (!empty($help)) { echo render($help); } ?>
+                                                <?php if (!empty($messages)) { echo $messages; } ?>
+                                                <?php if (isset($action_links) && !empty($action_links)): ?>
+                                                <ul class="action-links">
+                                                    <?php print render($action_links); ?>
+                                                </ul>
+                                                <?php endif; ?>
                                             </div>
+                                            <div class="cleared"></div>
                                         </div>
-                                    <?php endif; ?>
-                                    <?php $art_post_position = strpos(render($content), "art-post"); ?>
-                                    <?php if ($art_post_position === FALSE): ?>
-                                        <div class="art-box art-post">
-                                            <div class="art-box-body art-post-body">
-                                                <div class="art-post-inner art-article">
-                                                    <div class="art-postcontent">
-                                                        <?php endif; ?>
-                                                        <?php echo art_content_replace(render($content)); ?>
-                                                        <?php if ($art_post_position === FALSE): ?>
-                                                    </div>
-                                                    <div class="cleared"></div>
-                                                </div>
-                                                <div class="cleared"></div>
+                                        <div class="cleared"></div>
+                                    </div>
+                                </div>
+                                <?php endif; ?>
+                                <?php $art_post_position = strpos(render($content), "art-post"); ?>
+                                <?php if ($art_post_position === FALSE): ?>
+                                <div class="art-box art-post">
+                                    <div class="art-box-body art-post-body">
+                                        <div class="art-post-inner art-article">
+                                            <div class="art-postcontent">
+                                                <?php endif; ?>
+                                                <?php echo art_content_replace(render($content)); ?>
+                                                <?php if ($art_post_position === FALSE): ?>
                                             </div>
+                                            <div class="cleared"></div>
                                         </div>
-                                    <?php endif; ?>
+                                        <div class="cleared"></div>
+                                    </div>
+                                </div>
+                                <?php endif; ?>
                                 <?php else: ?>
-                                    <?php if ($mission || $help || $messages || $action_links): ?>
-                                        <div class="art-box art-post">
-                                            <div class="art-box-body art-post-body">
-                                                <div class="art-post-inner art-article">
-                                                    <div class="art-postcontent">
-                                                        <?php print render($title_prefix); ?>
-                                                        <?php if ($title): ?>
-                                                            <h1 class="title" id="page-title"><?php print bb2html($title); ?></h1>
-                                                        <?php endif; ?>
-                                                        <?php print render($title_suffix); ?>
-                                                        <?php if (!empty($tabs)) { echo $tabs.'<div class="cleared"></div>'; }; ?>
-                                                        <?php if (!empty($tabs2)) { echo $tabs2.'<div class="cleared"></div>'; } ?>
-                                                        <?php if (isset($mission) && !empty($mission)) { echo '<div id="mission">'.$mission.'</div>'; }; ?>
-                                                        <?php if (!empty($help)) { echo render($help); } ?>
-                                                        <?php if (!empty($messages)) { echo $messages; } ?>
-                                                        <?php if (isset($action_links) && !empty($action_links)): ?>
-                                                        <ul class="action-links">
-                                                            <?php print render($action_links); ?>
-                                                        </ul>
-                                                        <?php endif; ?>
-                                                        <?php echo art_content_replace(render($content)); ?>
-                                                    </div>
-                                                    <div class="cleared"></div>
-                                                </div>
-                                                <div class="cleared"></div>
+                                <div class="art-box art-post">
+                                    <div class="art-box-body art-post-body">
+                                        <div class="art-post-inner art-article">
+                                            <div class="art-postcontent">
+                                                <?php print render($title_prefix); ?>
+                                                <?php if ($title): ?>
+                                                <h1 class="title" id="page-title">
+    <?php print bb2html($title); ?>
+  </h1>
+                                                <?php endif; ?>
+                                                <?php print render($title_suffix); ?>
+                                                <?php if (!empty($tabs)) { echo $tabs.'<div class="cleared"></div>'; }; ?>
+                                                <?php if (!empty($tabs2)) { echo $tabs2.'<div class="cleared"></div>'; } ?>
+                                                <?php if (isset($mission) && !empty($mission)) { echo '<div id="mission">'.$mission.'</div>'; }; ?>
+                                                <?php if (!empty($help)) { echo render($help); } ?>
+                                                <?php if (!empty($messages)) { echo $messages; } ?>
+                                                <?php if (isset($action_links) && !empty($action_links)): ?>
+                                                <ul class="action-links">
+                                                    <?php print render($action_links); ?>
+                                                </ul>
+                                                <?php endif; ?>
+                                                <?php echo art_content_replace(render($content)); ?>
                                             </div>
+                                            <div class="cleared"></div>
                                         </div>
-                                    <?php endif; ?>
+                                        <div class="cleared"></div>
+                                    </div>
+                                </div>
                                 <?php endif; ?>
                                 <?php if (!empty($banner4)) { echo '<div id="banner4">'.render($banner4).'</div>'; } ?>
                                 <?php if (!empty($user3) && !empty($user4)) : ?>
-                                    <table class="position" cellpadding="0" cellspacing="0" border="0">
-                                        <tr valign="top">
-                                            <td class="half-width">
-                                                <?php echo render($user3); ?>
-                                            </td>
-                                            <td>
-                                                <?php echo render($user4); ?>
-                                            </td>
-                                        </tr>
-                                    </table>
+                                <table class="position" cellpadding="0" cellspacing="0" border="0">
+                                    <tr valign="top">
+                                        <td class="half-width">
+                                            <?php echo render($user3); ?>
+                                        </td>
+                                        <td>
+                                            <?php echo render($user4); ?>
+                                        </td>
+                                    </tr>
+                                </table>
                                 <?php else: ?>
-                                    <?php if (!empty($user3)) { echo '<div id="user1">'.render($user3).'</div>'; }?>
-                                    <?php if (!empty($user4)) { echo '<div id="user2">'.render($user4).'</div>'; }?>
+                                <?php if (!empty($user3)) { echo '<div id="user1">'.render($user3).'</div>'; }?>
+                                <?php if (!empty($user4)) { echo '<div id="user2">'.render($user4).'</div>'; }?>
                                 <?php endif; ?>
                                 <?php if (!empty($banner5)) { echo '<div id="banner5">'.render($banner5).'</div>'; } ?>
                             </div>
-                            <?php if (!empty($art_sidebar_right) || !empty($vnavigation_right)) echo art_get_sidebar($art_sidebar_right, $vnavigation_right, 'art-sidebar2'); ?>
+                            <?php if (!empty($art_sidebar_right) || !empty($vnavigation_right))
+echo art_get_sidebar($art_sidebar_right, $vnavigation_right, 'art-sidebar2'); ?>
                         </div>
                     </div>
                 </div>
