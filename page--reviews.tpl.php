@@ -111,26 +111,7 @@ echo art_get_sidebar($art_sidebar_left, $vnavigation_left, 'art-sidebar1'); ?>
                                     </div>
                                 </div>
                                 <?php endif; ?>
-                                <?php if (!empty($mission) || !empty($help) || !empty($messages) || !empty($action_links)): ?>
-                                <div class="art-box art-post">
-                                    <div class="art-box-body art-post-body">
-                                        <div class="art-post-inner art-article">
-                                            <div class="art-postcontent">
-                                                <?php if (isset($mission) && !empty($mission)) { echo '<div id="mission">'.$mission.'</div>'; }; ?>
-                                                <?php if (!empty($help)) { echo render($help); } ?>
-                                                <?php if (!empty($messages)) { echo $messages; } ?>
-                                                <?php if (isset($action_links) && !empty($action_links)): ?>
-                                                <ul class="action-links">
-                                                    <?php print render($action_links); ?>
-                                                </ul>
-                                                <?php endif; ?>
-                                            </div>
-                                            <div class="cleared"></div>
-                                        </div>
-                                        <div class="cleared"></div>
-                                    </div>
-                                </div>
-                                <?php endif; ?>
+                                
                                 <?php $art_post_position = strpos(render($content), "art-post"); ?>
                                 <?php if ($art_post_position === FALSE): ?>
                                 <div class="art-box art-post">
